@@ -6,31 +6,33 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+import android.databinding.DataBindingUtil;
+import android.os.Bundle;
+
+
+import javax.inject.Inject;
+
+import com.ddiakovskiy.homework2.databinding.ActivityMainBinding;
+import com.ddiakovskiy.homework2.viewmodel.MainViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
+    @Inject
+    public ActivityMediator activityMediator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        ActivityMediator activityMediator = new ActivityMediator();
+
+        MainViewModel mainViewModel = new MainViewModel(this, activityMediator);
+        final ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        activityMainBinding.setViewModel(mainViewModel);
     }
 
-    public void onClickButtonCall(View v){
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:"));
-        startActivity(intent);
-    }
-    public void onClickButtonApp(View v){
-        Intent appIntent = new Intent(this, SecondActivity.class);
-        startActivity(appIntent);
-    }
-    public void onClickButtonSms(View v){
 
-        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-        sendIntent.setData(Uri.parse("sms:"));
-        startActivity(sendIntent);
-
-    }
 
 
 
