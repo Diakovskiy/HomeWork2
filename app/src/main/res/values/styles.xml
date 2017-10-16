@@ -32,5 +32,9 @@
         <item name="layout_rowWeight">3</item>
     </style>
 
+    <style name="SecondActivityStyleText" parent="android:Widget.TextView">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
 
 </resources>

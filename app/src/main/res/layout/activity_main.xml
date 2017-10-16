@@ -18,18 +18,21 @@
     <Button style="@style/RubberButtonInGreedLayout" />
 
     <ImageButton
-        style="@style/RubberActionButton"
         android:id="@+id/btnCall"
+        style="@style/RubberActionButton"
+        android:onClick="onClickButtonCall"
         grid:srcCompat="@drawable/imgcall" />
 
     <ImageButton
         style="@style/RubberActionButton"
         android:id="@+id/btnApp"
+        android:onClick="onClickButtonApp"
         grid:srcCompat="@drawable/imgapp" />
 
     <ImageButton
         style="@style/RubberActionButton"
         android:id="@+id/btnSMS"
+        android:onClick="onClickButtonSms"
         grid:srcCompat="@drawable/imgsms" />
 
 </android.support.v7.widget.GridLayout>
