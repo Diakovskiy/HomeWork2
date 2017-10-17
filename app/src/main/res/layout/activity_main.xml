@@ -2,9 +2,7 @@
     xmlns:grid="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable name="user" type="com.ddiakovskiy.homework2.User"/>
         <variable name="viewModel" type="com.ddiakovskiy.homework2.viewmodel.MainViewModel"/>
-
     </data>
 
     <android.support.v7.widget.GridLayout
@@ -24,22 +22,16 @@
         <Button style="@style/RubberButtonInGreedLayout" />
 
         <ImageButton
-            android:id="@+id/btnCall"
-            style="@style/RubberActionButton"
-            android:onClick="@{viewModel::onClickButtonCall}"
-            grid:srcCompat="@drawable/imgcall" />
+            style="@style/RubberActionButtonCall"
+            android:onClick="@{viewModel::onClickButtonCall}"/>
 
         <ImageButton
-            android:id="@+id/btnApp"
-            style="@style/RubberActionButton"
-            android:onClick="@{viewModel::onClickButtonApp}"
-            grid:srcCompat="@drawable/imgapp" />
+            style="@style/RubberActionButtonApp"
+            android:onClick="@{viewModel::onClickButtonApp}"/>
 
         <ImageButton
-            android:id="@+id/btnSMS"
-            style="@style/RubberActionButton"
-            android:onClick="@{viewModel::onClickButtonSms}"
-            grid:srcCompat="@drawable/imgsms" />
+            style="@style/RubberActionButtonSMS"
+            android:onClick="@{viewModel::onClickButtonSms}"/>
 
     </android.support.v7.widget.GridLayout>
 </layout>

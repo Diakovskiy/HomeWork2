@@ -8,7 +8,7 @@ import dagger.Module;
 import com.ddiakovskiy.homework2.MainActivity;
 
 @Singleton
-@Component(modules={NetModule.class, AppModule.class})
+@Component(modules={AppModule.class})
 public interface NetComponent {
     void inject(MainActivity activity);
 }

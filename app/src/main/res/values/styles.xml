@@ -37,4 +37,17 @@
         <item name="android:layout_width">match_parent</item>
     </style>
 
+    <style name="RubberActionButtonCall" parent="RubberActionButton">
+        <item name="srcCompat">@drawable/imgcall</item>
+    </style>
+
+    <style name="RubberActionButtonApp" parent="RubberActionButton">
+        <item name="srcCompat">@drawable/imgapp</item>
+    </style>
+
+    <style name="RubberActionButtonSMS" parent="RubberActionButton">
+        <item name="srcCompat">@drawable/imgsms</item>
+    </style>
+
+
 </resources>

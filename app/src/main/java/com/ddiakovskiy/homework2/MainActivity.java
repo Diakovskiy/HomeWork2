@@ -24,17 +24,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
-        ActivityMediator activityMediator = new ActivityMediator();
+        CustomApp app = (CustomApp) getApplicationContext();
+        app.getNetComponent().inject(this);
 
         MainViewModel mainViewModel = new MainViewModel(this, activityMediator);
         final ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.setViewModel(mainViewModel);
     }
-
-
-
-
-
 
 }

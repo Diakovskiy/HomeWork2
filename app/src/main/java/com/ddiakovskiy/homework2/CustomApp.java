@@ -1,10 +1,8 @@
 package com.ddiakovskiy.homework2;
 
 import android.app.Application;
+import com.ddiakovskiy.homework2.di.DaggerNetComponent;
 import com.ddiakovskiy.homework2.di.NetComponent;
-/**
- * Created by d.diakovskiy on 17.10.2017.
- */
 
 public class CustomApp extends Application {
 
@@ -14,9 +12,9 @@ public class CustomApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-//        netComponent = DaggerNetComponent
-//                .builder()
-//                .build();
+        netComponent = DaggerNetComponent
+                .builder()
+                .build();
     }
 
     public NetComponent getNetComponent() {
